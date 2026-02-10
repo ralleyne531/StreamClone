@@ -7,6 +7,6 @@ Similar products for reference : Kick [<a href="kick.com">link</a>], Twitch [<a 
 <br>
 For the moment, the application uses a mock backend (json)
 
-<img href="src/assets/img/ref/screenshot.png"/>
+![screenshot of twitch homepage](src/assets/img/ref/screenshot.png)
 <br>
-<img href="src/assets/img/ref/screenshot_two.png"/>
+![screenshot of twitch stream page](src/assets/img/ref/screenshot_two.png)
