@@ -1,12 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 *{
+    font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color:#FEFEFE;
+}
+
+:root{
+    --h1: 80px "Oswald", sans-serif;
+    --h2: 64px "Oswald", sans-serif;
+    --h3: 56px "Oswald", sans-serif;
+    --h4: 36px "Oswald", sans-serif;
+    --p: 24px "Oswald", sans-serif;
 }
 
 
 header {
-    background-color: darkcyan;
+    background-color: #1F1F1F;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,26 +28,56 @@ header {
 
 .nav, .profile{
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
 }
 
 li{
     list-style: none;
+    font: var(--p);
+    cursor: pointer;
+    margin: 0 5px;
 }
 
+.search{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: auto;
+    margin-bottom: 6px;
+}
 input{
-    height:36px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    height: 36px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    min-width: 33.3vw;
 }
 
 button{
-    background-color: #242424;
     height: 36px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-color: #242424;
+    width: 36px;
+    font-size:1.5rem;
+    flex-shrink:0;
+
 }
 
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    border:none;
+}
+
+.profile i{
+    width: 36px;
+    height: 36px;
+    font-size: 1.5em;
+}
+@media screen and (max-width:600px){
+    .search{
+        display: none;
+        visibility: hidden;
+    }
+}
 

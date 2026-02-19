@@ -9,16 +9,16 @@ function App() {
                 <li>icon</li>
                 <li>following</li>
                 <li>browse</li>
-                <li>etc</li>
+                <li><i class="fa-solid fa-caret-down"></i></li>
             </ul>
         </li>
-        <li><input type={"text"}/>
-            <button type={"submit"}>Submit</button>
+        <li className="search"><input type={"text"}/>
+            <button type={"submit"}><i class="fa-solid fa-magnifying-glass"></i></button>
         </li>
         <li><div className="profile">
-            <p>misc info</p>
-            <p>profile icon</p>
-        </div></li>
+            <i className="fa-solid fa-circle-user"></i>
+        </div>
+        </li>
     </header>
   )
 }
