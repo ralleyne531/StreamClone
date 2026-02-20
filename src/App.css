@@ -4,9 +4,9 @@
 *{
     font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
+    color:#FEFEFE;
     margin: 0;
     padding: 0;
-    color:#FEFEFE;
 }
 
 :root{
@@ -17,20 +17,12 @@
     --p: 24px "Oswald", sans-serif;
 }
 
-
 header {
     background-color: #1F1F1F;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height:50px;
-}
-
-.nav, .profile{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 li{
@@ -40,24 +32,53 @@ li{
     margin: 0 5px;
 }
 
+.nav, .profile{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile i{
+    width: 36px;
+    height: 36px;
+    font-size: 1.5em;
+}
+
 .search{
     display: flex;
     flex-flow: row nowrap;
     margin-top: auto;
     margin-bottom: 6px;
+    align-items: end;
+    gap:1px;
 }
+
 input{
     height: 36px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    min-width: 33.3vw;
+    min-width: 16.6vw;
+    padding: 0 5px;
+}
+
+input:focus{
+    border: red 4px solid;
+    outline: none;
+
 }
 
 button{
     height: 36px;
     width: 36px;
-    font-size:1.5rem;
+    font-size:1.33rem;
     flex-shrink:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
 
 }
 
@@ -69,12 +90,53 @@ button:active{
     border:none;
 }
 
-.profile i{
-    width: 36px;
-    height: 36px;
-    font-size: 1.5em;
+main{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow-x:hidden;
 }
-@media screen and (max-width:600px){
+
+main div{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar{
+    min-width: 40px;
+    width: 200px;
+    flex: 0 0 auto;
+    background-color: #1F1F1F;
+}
+
+.chat{
+    min-width: 340px;
+    flex: 0 0 auto;
+    background-color: #1F1F1F;
+    position: sticky;
+    z-index: 1;
+    right:0;
+}
+
+.container{
+    max-width: 3840px;
+    flex: 1 0 auto;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    z-index: 0;
+}
+
+@media screen and (max-width:1200px){
+    .sidebar{
+        width: 40px;
+        flex: 0 1 auto;
+        background-color: #1F1F1F;
+    }
+}
+
+@media screen and (max-width:760px){
     .search{
         display: none;
         visibility: hidden;
