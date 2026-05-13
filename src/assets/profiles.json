@@ -1,10 +1,18 @@
-{
-  "user": {
+[
+  {
     "id": 1,
+    "username":"thatcoolstreamer",
+    "email":"",
+    "icon": "",
+    "followers": [],
+    "following": []
+  },
+  {
+    "id": 2,
+    "username":"irlpokemon",
     "email":"",
     "icon": "",
     "followers": [],
     "following": []
   }
-
-}
+]

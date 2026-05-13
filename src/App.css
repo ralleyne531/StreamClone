@@ -1,20 +1,21 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap');
 
 *{
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
     color:#FEFEFE;
     margin: 0;
     padding: 0;
+
 }
 
 :root{
-    --h1: 80px "Oswald", sans-serif;
-    --h2: 64px "Oswald", sans-serif;
-    --h3: 56px "Oswald", sans-serif;
-    --h4: 36px "Oswald", sans-serif;
-    --p: 24px "Oswald", sans-serif;
+    --h1: 80px "Outfit", sans-serif;
+    --h2: 64px "Outfit", sans-serif;
+    --h3: 56px "Outfit", sans-serif;
+    --h4: 36px "Outfit", sans-serif;
+    --p: 18px "Outfit", sans-serif;
 }
 
 header {
@@ -43,6 +44,11 @@ li{
     width: 36px;
     height: 36px;
     font-size: 1.5em;
+}
+
+#pfp{
+    width: 30px;
+    border-radius: 16px;
 }
 
 .search{
@@ -93,7 +99,7 @@ button:active{
 main{
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -105,13 +111,21 @@ main div{
     flex-direction: column;
 }
 .sidebar{
+    height: 100vh;
     min-width: 40px;
     width: 200px;
     flex: 0 0 auto;
     background-color: #1F1F1F;
+
+}
+
+#following{
+    font: var(--p);
 }
 
 .chat{
+    display: flex;
+    flex-direction: column;
     min-width: 340px;
     flex: 0 0 auto;
     background-color: #1F1F1F;
@@ -120,6 +134,11 @@ main div{
     right:0;
 }
 
+.chatbox{
+    background-color:greenyellow;
+    display: flex;
+    flex-flow: row nowrap;
+}
 .container{
     max-width: 3840px;
     flex: 1 0 auto;
@@ -133,6 +152,14 @@ main div{
         width: 40px;
         flex: 0 1 auto;
         background-color: #1F1F1F;
+    }
+    #following li span,p{
+        display:none;
+    }
+
+    #following li img {
+        display: block;
+        margin: 10px auto;
     }
 }
 

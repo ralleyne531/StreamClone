@@ -1,9 +1,11 @@
-
+import users from './assets/profiles.json'
+import profileImg0 from './assets/img/profile_icons/profile_Img0.png'
+import {useEffect, useState} from "react";
 import './App.css';
 
 function App() {
 
-  return (
+    return (
   <>
     <header>
         <li><ul className="nav">
@@ -23,15 +25,22 @@ function App() {
     </header>
     <main>
         <div className="sidebar">
-            LOREM
+            <p>Following</p>
+            <ul id="following">
+                {users.map((user) => (<li key={user.id}><img src={profileImg0} alt="profile icon" id="pfp"/> <span>{user.username}</span></li>))}
+            </ul>
+            <p>Suggested Channels</p>
         </div>
-        <div className="container"><video controls src="src/assets/video/black_screen.mp4"></video></div>
+        <div className="container"><video controls src="src/assets/video/black_screen.mp4" muted autoPlay playsInline ></video></div>
         <div className="chat">
-            IPSUM
+            <div className="chatbox">
+            <input type={"text"}/>
+            <button type={"submit"}><i className="fa-solid fa-magnifying-glass"></i></button>
+            </div>
         </div>
     </main>
   </>
-  )
+    )
 }
 
 export default App
